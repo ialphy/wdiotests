@@ -5,7 +5,7 @@ class LoginPage extends Page {
     get inputUsername () { return $('#normal_login_email'); }
     get inputPassword () { return $('#normal_login_password'); }
     get buttonSubmit () { return $('.login-form-button'); }
-    get errorToast () {return $('.ant-notification-notice-message')};
+    get errorToast () { return $('.ant-notification-notice-message'); }
 
     open () {
         return super.open('/');
@@ -28,7 +28,7 @@ class LoginPage extends Page {
     }
 
     errorToastAppeared(){
-        expect(this.errorToast).toBeDisabled();
+        expect(this.errorToast).toBeDisplayed();
     }
 }
 
